@@ -54,7 +54,7 @@ execute "apt-get update" do
   action :run
 end
 
-package 'postgresql-9.1-postgis2'
+package node['postgis']['package']
 
 include_recipe 'postgresql::server'
 
