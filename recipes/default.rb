@@ -46,7 +46,15 @@ apt_repository 'ppa_ubuntugis_ubuntugis-unstable' do
 end
 
 package 'python-software-properties'
-package 'postgresql-9.1-postgis2.0'
+
+# make sure apt package cache is up-to-date
+execute "apt-get update" do
+  command "apt-get update"
+  ignore_failure true
+  action :run
+end
+
+package 'postgresql-9.1-postgis2'
 
 include_recipe 'postgresql::server'
 
