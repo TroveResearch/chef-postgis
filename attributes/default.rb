@@ -14,4 +14,4 @@
 
 default['postgis']['template_name'] = 'template_postgis'
 default['postgis']['locale'] = 'en_US.utf8'
-default['postgis']['package'] = 'postgresql-9.1-postgis'
+default['postgis']['package'] = 'postgresql-9.1-postgis-2.0'
