@@ -17,24 +17,6 @@
 # behind a firewall.
 include_recipe 'postgis::_add_keys'
 
-apt_repository 'ppa_sharpie_for-science' do
-  uri 'http://ppa.launchpad.net/sharpie/for-science/ubuntu'
-  distribution node['lsb']['codename']
-  components ["main"]
-  keyserver 'keyserver.ubuntu.com'
-  key 'DAF764E2'
-  deb_src true
-end
-
-apt_repository 'ppa_sharpie_postgis-stable' do
-  uri 'http://ppa.launchpad.net/sharpie/postgis-stable/ubuntu'
-  distribution node['lsb']['codename']
-  components ['main']
-  keyserver 'keyserver.ubuntu.com'
-  key 'DAF764E2'
-  deb_src true
-end
-
 apt_repository 'ppa_ubuntugis_ubuntugis-unstable' do
   uri 'http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu'
   distribution node['lsb']['codename']
