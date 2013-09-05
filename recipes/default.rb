@@ -46,7 +46,7 @@ apt_repository 'ppa_ubuntugis_ubuntugis-unstable' do
 end
 
 package 'python-software-properties'
-package 'postgresql-9.1-postgis2'
+package 'postgresql-9.1-postgis2.0'
 
 include_recipe 'postgresql::server'
 
